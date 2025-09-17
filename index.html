@@ -8,6 +8,9 @@
    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <style>
+   body{
+      overflow-x: hidden;
+   }
    * {
       margin: 0;
       padding: 0;
@@ -149,17 +152,7 @@
 
    }
 
-   .videobox {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: rgb(202, 219, 219);
-      justify-content: center;
-      padding: 20px 110px;
-      height: 500px;
-
-   }
-
+   
    .h4 {
       /* background-color: blue; */
       padding: 12px;
@@ -168,7 +161,7 @@
       font-size: 34px;
       font-family: Arial Black;
    }
-
+   
    .h5 {
       /* background-color: aqua; */
       padding: 2px;
@@ -177,25 +170,60 @@
       margin: 3px;
    }
 
-   .videobox div p {
-      /* background-color: rgb(73, 139, 139); */
-      padding: 15px;
-      margin: 2px;
+
+   
+   .videobox { 
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(202, 219, 219);
+      justify-content: center;
+      padding: 20px 110px;
+      min-height: 500px;
+      overflow: hidden;
+
+   }
+   .content-above-video{
+      background-color: blueviolet;
+      position: absolute;
+      top: 0;
+      left: 160px;
+      width: 75%;
+      height: 35%;   
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+   } 
+
+   .content-above-video div p{
+      background-color: brown;
+      /* padding: 10px; */
       text-align: center;
-      /* color: black; */
+      color: black;
       /* font-family: 'Courier New', Courier, monospace; */
       font-size: 20px;
+   } 
+  
 
-   }
-
-   .videobox iframe {
-      margin: 5px;
-      padding: 10px;
+   .video{
+      position: absolute;
+      top: 38%;   
       /* background-color: blueviolet; */
-      width: 90%;
-      height: 80%;
+      width: 75%;
+      height: 55%;
 
    }
+   .video video{
+      background-color: aqua;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+   }
+
 
    .cardbox2 {
       /* background-color: brown; */
@@ -347,15 +375,23 @@
 
 
       <div class="videobox">
-         <div class="h4">FEATURED CONTENT</div>
-         <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In pariatur sequi blanditiis non laudantium
-               commodi animi nobis dolor illo, repellat atque minus sit similique qui eius, facere tenetur. Perferendis
-               saepe voluptates eveniet culpa sed reprehenderit ipsam sit similique, molestias sint ut, vitae
-               perspiciatis quo. Veritatis molestiae sit non vel corporis.</p>
+         <div class="content-above-video">
+            <div class="h4">FEATURED CONTENT</div>
+            <div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In pariatur sequi blanditiis non laudantium
+                  commodi animi nobis dolor illo, repellat atque minus sit similique qui eius, facere tenetur. Perferendis
+                  saepe voluptates eveniet culpa sed reprehenderit ipsam sit similique, molestias sint ut, vitae
+                  perspiciatis quo. Veritatis molestiae sit non vel corporis.</p>
+            </div>
+
          </div>
-         <iframe src="https://pin.it/1z2HC69IA" frameborder="2"></iframe>
-         <!-- <video src="https://pin.it/1z2HC69IA"></video> -->
+
+          <div class="video">
+            <video autoplay loop muted >
+            <source src="video.mp4" type="video/mp4">
+            your browser doesnot support the video tag
+          </video>
+         </div>
       </div>
 
       <div class="cardbox2">
