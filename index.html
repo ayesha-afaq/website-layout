@@ -16,6 +16,15 @@
       padding: 0;
    }
 
+   :root{
+      --header-color:white;
+      --basecolor: azure;
+      --primary-foot-heading-color: rgb(37, 37, 37);
+      --secondary-heading:rgb(75, 74, 74);
+      --secondarycolor: rgb(161, 156, 156);
+      --text-color:black;
+
+   }
    header {
       display: flex;
       position: sticky;
@@ -23,7 +32,7 @@
       z-index: 100;
       gap: 300px;
       height: 100px;
-      background-color: rgb(255, 255, 255);
+      background-color: var(--header-color);
    }
 
 
@@ -37,7 +46,7 @@
       margin-bottom: 10px;
       margin-right: 10px;
       padding: 30px;
-      /* color: beige; */
+      color: var(--text-color);
       font-size: 50px;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -61,7 +70,7 @@
 
    nav ul li a {
       text-decoration: none;
-      /* color: azure; */
+      color: var(--text-color);
       font-family: 'Courier New', Courier, monospace;
       font-weight: 100px;
       font-size: 22px;
@@ -77,7 +86,7 @@
    }
 
    .box1 img {
-      object-fit: fill;
+      object-fit:fill;
       width: 100%;
       height: 500px;
 
@@ -85,7 +94,7 @@
 
    .pic-text-box {
       position: absolute;
-      top: 150px;
+      top: 130px;
       left: 10%;
       display: flex;
       width: 80%;
@@ -99,16 +108,16 @@
 
    .h2 {
       font-size: 30px;
+      color: var(--primary-foot-heading-color);
       font-family: Arial Black;
-      /* color: black; */
       /* padding: 2px 30px 2px 30px; */
       /* background-color: rgb(77, 112, 124); */
    }
 
    .h1 {
       font-size: 50px;
-      font-family: Calibri Light;
-      /* color: black; */
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: var(--primary-foot-heading-color);
       /* background-color: lightcoral; */
       word-spacing: 2px;
 
@@ -129,7 +138,7 @@
       gap: 35px;
       align-items: center;
       justify-content: center;
-      /* background-color: lightsalmon; */
+      background-color: var(--basecolor);
       padding: 50px 40px 30px 40px;
    }
 
@@ -148,7 +157,7 @@
    .card div p {
       text-align: center;
       /* font-family: 'Courier New', Courier, monospace; */
-      /* color: black; */
+      color: var(--text-color);
 
    }
 
@@ -157,7 +166,7 @@
       /* background-color: blue; */
       padding: 12px;
       margin: 2px;
-      /* color: black; */
+      color: var(--primary-foot-heading-color);
       font-size: 34px;
       font-family: Arial Black;
    }
@@ -166,6 +175,7 @@
       /* background-color: aqua; */
       padding: 2px;
       font-size: 17px;
+      color: var(--secondary-heading);
       font-family: Arial Black;
       margin: 3px;
    }
@@ -185,7 +195,7 @@
 
    }
    .content-above-video{
-      background-color: blueviolet;
+      /* background-color: blueviolet; */
       position: absolute;
       top: 0;
       left: 160px;
@@ -199,10 +209,10 @@
    } 
 
    .content-above-video div p{
-      background-color: brown;
+      /* background-color: brown; */
       /* padding: 10px; */
       text-align: center;
-      color: black;
+      color: var(--text-color);
       /* font-family: 'Courier New', Courier, monospace; */
       font-size: 20px;
    } 
@@ -210,14 +220,14 @@
 
    .video{
       position: absolute;
-      top: 38%;   
+      top: 36%;   
       /* background-color: blueviolet; */
-      width: 75%;
-      height: 55%;
+      width: 70%;
+      height: 60%;
 
    }
    .video video{
-      background-color: aqua;
+      /* background-color: aqua; */
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -226,7 +236,7 @@
 
 
    .cardbox2 {
-      /* background-color: brown; */
+      background-color: var(--basecolor);
       margin: 4px 0;
       display: flex;
       align-items: center;
@@ -256,7 +266,7 @@
    }
    .lastbox{
       background-color: rgb(202, 219, 219);
-      margin: 5px 0;
+      margin: 3px 0;
       padding: 50px 150px;
       justify-items: center;
    }
@@ -265,9 +275,9 @@
       /* background-color: blueviolet; */
       padding: 5px;
       margin: 5px;
+      color: var(--text-color);
 
       /* font-family: 'Courier New', Courier, monospace; */
-      /* color: black; */
 
    }
    .lastbox div button{
@@ -281,10 +291,10 @@
    }
    footer{
       display: flex;
-      background-color: rgb(43, 43, 97);
+      background-color: rgb(37, 37, 37);
       padding: 45px;
       gap: 550px;
-      color: azure;
+      color: var(--basecolor);
    }
 
    .company ul li{
@@ -293,7 +303,7 @@
 
    .company ul li a{
       text-decoration: none;
-      color: azure;
+      color: var(--basecolor);
       font-family:'Times New Roman', Times, serif;
       font-size: 16px;
       font: 16px;
@@ -332,7 +342,7 @@
 
    <main>
       <div class="box1">
-         <img src="mainphoto.jpg" alt="">
+         <img src="image.png" alt="">
          <div class="pic-text-box">
             <div class="h2">A MINIMAL, CLEAN</div>
             <div class="h1">LAYOUT FOR WEBDESIGN</div>
